@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../Users/prana/OneDrive/Desktop/todos-list"
+		},
+		{
+			"path": "../Users/prana/OneDrive/Desktop/Pranay PS"
+		},
+		{
+			"path": "../Users/prana/OneDrive/Desktop/Node js"
+		},
+		{
+			"path": "../Users/prana/OneDrive/Desktop/Pranay JS"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "c:"
+	}
+}
