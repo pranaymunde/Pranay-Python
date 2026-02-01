@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>🎶 Aartis</h2>
+
+<form action="/aartis/add" method="POST" class="mb-4">
+    <input type="text" name="title" class="form-control mb-2" placeholder="Aarti Title" required>
+    <textarea name="content" class="form-control mb-2" rows="4" placeholder="Aarti Content" required></textarea>
+    <button class="btn btn-primary">Add Aarti</button>
+</form>
+
+{% for a in aartis %}
+<div class="card mb-2">
+    <div class="card-body">
+        <a href="/aarti/{{ a.id }}">{{ a.title }}</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

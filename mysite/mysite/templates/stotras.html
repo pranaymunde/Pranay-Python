@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>📜 Stotras</h2>
+
+<form action="/stotras/add" method="POST" class="mb-4">
+    <input type="text" name="title" class="form-control mb-2" placeholder="Stotra Title" required>
+    <textarea name="content" class="form-control mb-2" rows="4" placeholder="Stotra Content" required></textarea>
+    <button class="btn btn-primary">Add Stotra</button>
+</form>
+
+{% for s in stotras %}
+<div class="card mb-2">
+    <div class="card-body">
+        <a href="/stotra/{{ s.id }}">{{ s.title }}</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

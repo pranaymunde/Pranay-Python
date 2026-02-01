@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>📜 {{ stotra.title }}</h2>
+<div class="card mb-2">
+    <div class="card-body">
+        <pre>{{ stotra.content }}</pre>
+    </div>
+</div>
+{% endblock %}

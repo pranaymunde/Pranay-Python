@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Selected Python Script",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/${input:scriptPath}",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "scriptPath",
+      "type": "pickString",
+      "description": "Select the Python script to debug (choose your entrypoint)",
+      "options": [
+        "app.py",
+        "mysite/manage.py",
+        "Matplotlib.py",
+        "Pygame.py",
+        "Bar plot.py"
+      ]
+    }
+  ]
+}

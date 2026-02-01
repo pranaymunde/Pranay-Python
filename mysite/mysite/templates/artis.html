@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aartis</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body class="p-4">
+    <h2>🎶 Aarti List</h2>
+    <a href="/" class="btn btn-secondary mb-3">Home</a>
+
+    <form action="/aartis/add" method="POST" class="mb-4">
+      <input
+        type="text"
+        name="title"
+        class="form-control mb-2"
+        placeholder="Aarti Title"
+        required
+      />
+      <textarea
+        name="content"
+        class="form-control mb-2"
+        rows="4"
+        placeholder="Aarti Content"
+        required
+      ></textarea>
+      <button class="btn btn-primary">Add Aarti</button>
+    </form>
+
+    <ul class="list-group">
+      {% for a in aartis %}
+      <li class="list-group-item">
+        <a href="/aarti/{{ a.id }}">{{ a.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
